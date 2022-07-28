@@ -9,7 +9,6 @@ again = 1
 while(again == 1):
     num = rand.randint(1, 25)
     tries = 5
-    print(num)
 
     while(tries != 0):
         guess = int(input('Enter your guess: '))
