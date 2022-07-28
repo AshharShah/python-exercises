@@ -10,13 +10,15 @@ tries = 5
 print(num)
 
 while(tries != 0):
-    guess = input('Enter your guess: ')
+    guess = int(input('Enter your guess: '))
     if(guess > num):
         print('Go Lesser')
     elif(guess < num):
         print('Go Higher')
     else:
         print('Well Done! You Guessed The Number')
+        break
+    tries = tries - 1
 
 if(tries == 0):
     print('You Lost! The Number Was:', num)
