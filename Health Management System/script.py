@@ -28,21 +28,21 @@ global taskName
 
 if (logType == 1):
     if(logName == 1):
-        file = open('Health Management System\csv-files\harry-diet.csv')
+        file = open('Health Management System\csv_files\harry_diet.csv')
         taskName = input("What did Harry Eat?\n")
     elif(logName == 2):
-        file = open('Health Management System\csv-files\ashhar-diet.csv')
+        file = open('Health Management System\csv_files\ashhar_diet.csv')
         taskName = input("What did Ashhar Eat?\n")
     elif(logName == 3):
-        file = open('Health Management System\csv-files\bilal-diet.csv')
+        file = open('Health Management System\csv_files\bilal_diet.csv')
         taskName = input("What did Bilal Eat?\n")
 elif (logType == 2):
     if(logName == 1):
-        file = open('Health Management System\csv-files\harry-exercise.csv')
-        taskName = input("What exersice did Harry do?\n")
+        file = open('Health Management System\csv_files\harry_exercise.csv')
+        taskName = input("What exercise did Harry do?\n")
     elif(logName == 2):
-        file = open('Health Management System\csv-files\ashhar-exercise.csv')
-        taskName = input("What exersice did Ashhar do?\n")
+        file = open('Health Management System\csv_files\ashhar_exercise.csv')
+        taskName = input("What exercise did Ashhar do?\n")
     elif(logName == 3):
-        file = open('Health Management System\csv-files\bilal-exercise.csv')
-        taskName = input("What exersice did Bilal do?\n")
+        file = open('Health Management System\csv_files\bilal_exercise.csv')
+        taskName = input("What exercise did Bilal do?\n")
