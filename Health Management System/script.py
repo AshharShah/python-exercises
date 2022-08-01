@@ -29,5 +29,16 @@ global file
 if (logType == 1):
     if(logName == 1):
         file = open("Health Management System\csv-files\harry-diet.csv")
+    elif(logName == 2):
+        file = open("Health Management System\csv-files\bilal-diet.csv")
+    elif(logName == 3):
+        file = open("Health Management System\csv-files\ashhar-diet.csv")
+elif (logType == 2):
+    if(logName == 1):
+        file = open("Health Management System\csv-files\harry-exercise.csv")
+    elif(logName == 2):
+        file = open("Health Management System\csv-files\bilal-exercise.csv")
+    elif(logName == 3):
+        file = open("Health Management System\csv-files\ashhar-exercise.csv")
 
 print(type(file))
