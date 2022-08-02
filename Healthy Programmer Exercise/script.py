@@ -1,34 +1,36 @@
 from pygame import mixer
+import os
+from datetime import datetime
+import time
 
-# Starting the mixer
+os.system("CLS")
+print("Welcome to the Healthy Programmer Application!\n")
+print("This application starts at 9AM and lasts till 5PM\n")
+print("During this time it reminds you the following:")
+print("1) Drink water after every 45mins!")
+print("2) Remove eyes from the screen after every 25mins!")
+print("3) Do a physical activity after every 1hour!\n")
+
 mixer.init()
+while(1):
+    time.sleep(1)
+    now = datetime.now()
+    current_time = int(now.strftime("%S"))
 
-# Loading the song
-mixer.music.load("Healthy Programmer Exercise\water.mp3")
+    if(current_time == 0):
+        current_time = 60
 
-# Setting the volume
-mixer.music.set_volume(0.7)
+    print("Current Time =", current_time)
 
-# Start playing the song
-mixer.music.play()
-
-# infinite loop
-while True:
-
-    print("Press 'p' to pause, 'r' to resume")
-    print("Press 'e' to exit the program")
-    query = input("  ")
-
-    if query == 'p':
-
-        # Pausing the music
-        mixer.music.pause()
-    elif query == 'r':
-
-        # Resuming the music
-        mixer.music.unpause()
-    elif query == 'e':
-
-        # Stop the mixer
-        mixer.music.stop()
-        break
+    if(current_time % 25 == 0):
+        mixer.music.load("Healthy Programmer Exercise\eye.mp3")
+        mixer.music.set_volume(1.0)
+        mixer.music.play()
+    elif(current_time % 45 == 0):
+        mixer.music.load("Healthy Programmer Exercise\water.mp3")
+        mixer.music.set_volume(1.0)
+        mixer.music.play()
+    elif(current_time % 60 == 0):
+        mixer.music.load("Healthy Programmer Exercise\physical.mp3")
+        mixer.music.set_volume(1.0)
+        mixer.music.play()
