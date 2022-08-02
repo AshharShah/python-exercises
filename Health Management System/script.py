@@ -56,9 +56,9 @@ if (logType == 1):
 elif (logType == 2):
     if(logName == 1):
         taskName = input("What exercise did Harry do?\n")
+        newInfo = [getdate(), taskName]
         append_list_as_row(
             'Health Management System\harry_exercise.csv', newInfo)
-        newInfo = [getdate(), taskName]
     elif(logName == 2):
         taskName = input("What exercise did Ashhar do?\n")
         newInfo = [getdate(), taskName]
